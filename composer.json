@@ -1,0 +1,16 @@
+{
+    "name": "Holonist/HoloForm",
+    "type": "library",
+    "description": "PHP Form",
+    "keywords": ["php","form"],
+    "homepage": "https://holonaut.eu",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William Raendchen",
+            "email": "holonistaux@gmail.com",
+            "homepage": "https://holonaut.eu",
+            "role": "Developer"
+        }
+    ],
+}
