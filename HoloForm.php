@@ -23,7 +23,7 @@ if($request->has($form->id)){
 }
  */
 
-namespace Holonist\HoloForm;
+namespace Holonaut\HoloForm;
 
 class HoloForm
 {
