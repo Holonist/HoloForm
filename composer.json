@@ -1,5 +1,5 @@
 {
-    "name": "Holonist/HoloForm",
+    "name": "holonaut/holo-form",
     "type": "library",
     "description": "PHP Form",
     "keywords": ["php","form"],
