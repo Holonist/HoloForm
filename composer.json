@@ -1,6 +1,6 @@
 {
     "name": "holonaut/holo-form",
-    "description": "Form generator for Eloquent models supporting with foreign key support.",
+    "description": "Form generator for Eloquent models with foreign key support.",
     "type": "library",
     "license": "MIT",
     "authors": [
