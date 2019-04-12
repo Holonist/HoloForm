@@ -82,6 +82,7 @@ class HoloFormBuilder
 			if($usesForeignKey){
 				$fkExistingEntries = DB::connection('mysql')
 					->table($fkUsage->table)
+					->limit(1000)
 					->get([$fkUsage->column])
 					->pluck($fkUsage->column)
 					->toArray()
@@ -94,7 +95,9 @@ class HoloFormBuilder
 				$column->Default,
 				($column->Null == 'NO') ? 'required' : '',
 				($column->Null == 'NO') ? 'required' : '',
-				$fkExistingEntries ?? null
+				$fkExistingEntries ?? null,
+				false,
+				['comment' => $column->Comment]
 			);
 		}
 

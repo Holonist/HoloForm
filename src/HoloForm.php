@@ -97,8 +97,9 @@ class HoloForm
         ];
 
     	// add restricted additional options if necessary
+		$allowedOptions = ['comment'];
     	if(!empty($additionalOptions)){
-    		$options = HoloHelper::cleanArray($additionalOptions, ['comment']);
+    		$options = HoloHelper::cleanArray($additionalOptions, $allowedOptions);
 
     		foreach ($options as $key => $option) {
     			$input->{$key} = $option;
