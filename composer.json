@@ -1,16 +1,19 @@
 {
     "name": "holonaut/holo-form",
+    "description": "Form generator for Eloquent models supporting with foreign key support.",
     "type": "library",
-    "description": "PHP Form",
-    "keywords": ["php","form"],
-    "homepage": "https://holonaut.eu",
     "license": "MIT",
     "authors": [
         {
             "name": "William Raendchen",
-            "email": "holonistaux@gmail.com",
-            "homepage": "https://holonaut.eu",
-            "role": "Developer"
+            "email": "holonistaux@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+	"autoload": {
+        "psr-4": {
+            "Holonaut\\HoloForm\\": "src/"
+        }
+    }
+    "require": {}
 }
