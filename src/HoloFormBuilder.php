@@ -26,8 +26,6 @@ namespace Holonaut\HoloForm;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
-use App\CustomClasses\HoloHelper;
-use App\CustomClasses\HoloForm;
 
 class HoloFormBuilder
 {
@@ -61,7 +59,10 @@ class HoloFormBuilder
 		Config::set("$informationSchemaConfigIndex.name", $informationSchemaName); // adjust the name
 		Config::set("$informationSchemaConfigIndex.database", 'information_schema'); // adjust the database
 
-		$columns = DB::select('describe ' . $model->getTable());
+		// get the column data from which we generate the form
+		// Field, Type, Comment, etc
+		//$columns = DB::select('describe ' . $model->getTable());
+		$columns = DB::select('SHOW FULL COLUMNS FROM ' . $model->getTable());
 
 		foreach ($columns as $column){
 			$fkExistingEntries = [];

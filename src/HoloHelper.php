@@ -56,7 +56,7 @@ class HoloHelper
 		return $objects;
 	}
 
-	public static function cleanObjects($objects, array $allowedProperties)
+	public static function cleanObjects(array $objects, array $allowedProperties)
 	{
 		foreach ($objects as &$object) {
 			foreach ($object as $propertyName => $propertyValue){
@@ -64,9 +64,19 @@ class HoloHelper
 					unset($object->$propertyName);
 				}
 			}
-		}
+		} unset($object);
 
 		return $objects;
+	}
+
+	public static function cleanArray(array $arrayToClean, array $allowedKeys) {
+		foreach($arrayToClean as $key => $entry) {
+			if(!in_array($key, $allowedKeys)) {
+				unset($arrayToClean[$key]);
+			}
+		}
+
+		return $arrayToClean;
 	}
 
 	public static function getFormFile($formId, $fileName = 'file')

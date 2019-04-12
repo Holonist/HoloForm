@@ -70,8 +70,16 @@ class HoloForm
 	 * @param bool $multiple
 	 * @return $this
 	 */
-    public function addInput(string $name, string $type, string $value = null, string $extra = '', string $classes = null, array $selectOptions = [], $multiple = false)
-    {
+    public function addInput(
+    	string $name,
+		string $type,
+		string $value = null,
+		string $extra = '',
+		string $classes = null,
+		array $selectOptions = [],
+		$multiple = false,
+		$additionalOptions = []
+	) {
     	$inputName = $this->id . '[' . $name . ']';
 
     	if($multiple == true){
@@ -87,6 +95,16 @@ class HoloForm
 			'classes' => $classes,
 			'selectOptions' => $selectOptions
         ];
+
+    	// add restricted additional options if necessary
+    	if(!empty($additionalOptions)){
+    		$options = HoloHelper::cleanArray($additionalOptions, ['comment']);
+
+    		foreach ($options as $key => $option) {
+    			$input->{$key} = $option;
+			}
+		}
+
         $this->inputs[$name] = $input;
         return $this;
     }
