@@ -9,11 +9,10 @@
             "email": "holonistaux@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
 	"autoload": {
         "psr-4": {
             "Holonaut\\HoloForm\\": "src/"
         }
     },
-    "require": {}
+	"minimum-stability": "stable",
 }
