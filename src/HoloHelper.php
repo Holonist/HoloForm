@@ -6,7 +6,7 @@
  * Time: 14:51
  */
 
-namespace Holonaut/HoloForm;
+namespace Holonaut\HoloForm;
 
 class HoloHelper
 {

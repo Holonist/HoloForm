@@ -21,7 +21,7 @@
  * The information_schema connection is created dynamically and directly derived from your model connection.
  */
 
-namespace Holonaut/HoloForm;
+namespace Holonaut\HoloForm;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
