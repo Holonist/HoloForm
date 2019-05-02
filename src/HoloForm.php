@@ -25,6 +25,8 @@ if($request->has($form->id)){
 
 namespace Holonaut\HoloForm;
 
+use Holonaut\HoloHelper\HoloHelper;
+
 class HoloForm
 {
     CONST ENC_DEFAULT = 'application/x-www-form-urlencoded';

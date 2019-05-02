@@ -23,6 +23,7 @@
 
 namespace Holonaut\HoloForm;
 
+use Holonaut\HoloHelper\HoloHelper;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
