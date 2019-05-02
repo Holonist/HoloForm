@@ -14,7 +14,8 @@ You can adjust it or write your own component of course.
 ### When using the form builder for Eloquent models:
 - your model must use the `mysql` driver  
 - your model must be an `Eloquent` model
-- the user which reads your model tables also needs read access to the `information_schema` database
+- the SQL user which reads your model tables
+also needs read access to the `information_schema` database
 
 ## Examples
 ### HoloForm
@@ -38,7 +39,7 @@ if($request->has('myFormId')) {
     // execute logic based on the received data
 }
 
-return view('myView', ['myForm' => $myForm])
+return view('myView', ['myForm' => $myForm]);
 ```
 
 I provide my own blade component in `/src/resources/components/form.blade.php`.
@@ -53,11 +54,11 @@ The usage inside your view file (let's say myView.blade.php) could look like thi
 ```
 
 ### HoloFormBuilder
-So far we achieved, that we don't need to update our view at all
+So far we achieved, that we don't need to update our HTML at all
 when we change the form definition in PHP. New fields will be added automatically.
 
-But let's take it one step further and let's get rid of the PHP too:
-generate the form directly from a model.
+But let's take it one step further and let's get rid of the PHP adjustments too:
+generate the form directly from a model (i.e. its table).
 
 ```php
 // Create an empty form
